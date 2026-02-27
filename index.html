@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YV Royal Hotel — Luxury Hotel in Panipat | Premium Stays & Services</title>
+  <meta name="description" content="Experience unmatched luxury at YV Royal Hotel, Panipat's premier 5-star destination. World-class rooms, fine dining, spa, pool, conference halls, and impeccable hospitality.">
+  <meta name="keywords" content="YV Royal Hotel, luxury hotel Panipat, 5-star hotel, premium accommodation, fine dining, spa, pool">
+
+  <!-- Favicon (gold diamond shape via SVG data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='20' width='60' height='60' rx='4' transform='rotate(45 50 50)' fill='%23c9a84c'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-family='serif' font-size='28' font-weight='bold' fill='%230a0a0f'%3EYV%3C/text%3E%3C/svg%3E">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div id="preloader">
+    <div class="preloader-logo">YV Royal</div>
+    <div class="preloader-bar">
+      <div class="preloader-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon"><span>YV</span></div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">YV Royal</span>
+          <span class="nav-logo-sub">Hotel &amp; Resort</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#dining">Dining</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="nav-book" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="YV Royal Hotel exterior at twilight" loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="hero-welcome">Welcome To Luxury</p>
+      <h1 class="hero-title">
+        Experience <span class="gold">Royalty</span><br>
+        at Its Finest
+      </h1>
+      <p class="hero-location">
+        <i class="fas fa-map-marker-alt"></i>
+        GT Road, Panipat, Haryana, India
+      </p>
+      <p class="hero-desc">
+        Discover unparalleled luxury in the heart of Panipat. 
+        YV Royal Hotel offers world-class accommodations, exquisite dining, 
+        and exceptional services that redefine hospitality.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('rooms').scrollIntoView({behavior:'smooth'})">
+          Explore Rooms <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          Discover More <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== Booking Bar ===== -->
+  <div class="booking-bar">
+    <div class="container">
+      <div class="booking-bar-inner">
+        <div class="booking-field">
+          <label for="checkin">Check In</label>
+          <input type="date" id="checkin">
+        </div>
+        <div class="booking-field">
+          <label for="checkout">Check Out</label>
+          <input type="date" id="checkout">
+        </div>
+        <div class="booking-field">
+          <label for="guests">Guests</label>
+          <select id="guests">
+            <option>1 Adult</option>
+            <option>2 Adults</option>
+            <option>2 Adults, 1 Child</option>
+            <option>2 Adults, 2 Children</option>
+            <option>3 Adults</option>
+            <option>Family (4+)</option>
+          </select>
+        </div>
+        <div class="booking-field">
+          <label for="roomtype">Room Type</label>
+          <select id="roomtype">
+            <option>Deluxe Room</option>
+            <option>Premium Suite</option>
+            <option>Royal Suite</option>
+            <option>Presidential Suite</option>
+          </select>
+        </div>
+        <button class="btn-primary" id="checkAvailability">Check Availability</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== About Section ===== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-images reveal">
+        <div class="about-img-main">
+          <img src="images/pool.png" alt="YV Royal Hotel pool area">
+        </div>
+        <div class="about-img-accent">
+          <img src="images/spa.png" alt="YV Royal Hotel spa">
+        </div>
+        <div class="about-experience">
+          <div class="number">15+</div>
+          <div class="label">Years of Excellence</div>
+        </div>
+      </div>
+
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">A Legacy of Luxury<br>in the Heart of Panipat</h2>
+        <p class="section-subtitle" style="margin-bottom:20px;">Where heritage meets modern elegance</p>
+        <p>
+          Nestled on the historic GT Road in Panipat, YV Royal Hotel stands as a beacon of 
+          refined luxury and warm Indian hospitality. For over 15 years, we have been the 
+          preferred destination for discerning travelers seeking an extraordinary experience.
+        </p>
+        <p>
+          Our commitment to excellence is reflected in every detail — from the intricately 
+          designed interiors to our meticulously curated services. Whether you visit for 
+          business or leisure, YV Royal Hotel promises a stay that transcends expectations.
+        </p>
+        <ul class="about-highlights">
+          <li><i class="fas fa-check"></i> 100+ Luxury Rooms &amp; Suites</li>
+          <li><i class="fas fa-check"></i> Multi-Cuisine Restaurant</li>
+          <li><i class="fas fa-check"></i> Rooftop Infinity Pool</li>
+          <li><i class="fas fa-check"></i> Full-Service Spa &amp; Wellness</li>
+          <li><i class="fas fa-check"></i> Grand Banquet &amp; Conference</li>
+          <li><i class="fas fa-check"></i> 24/7 Concierge Service</li>
+        </ul>
+        <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+          Our Services <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Section ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-tag" style="justify-content:center;">Our Services</span>
+        <h2 class="section-title">World-Class Amenities</h2>
+        <p class="section-subtitle">Every detail crafted for your utmost comfort and delight</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon"><i class="fas fa-bed"></i></div>
+          <h3>Luxury Rooms</h3>
+          <p>Elegantly furnished rooms with premium bedding, smart controls, and breathtaking views for the perfect rest.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Fine Dining</h3>
+          <p>Savor exquisite multi-cuisine dishes prepared by world-class chefs in our elegant restaurants and rooftop lounge.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon"><i class="fas fa-spa"></i></div>
+          <h3>Spa &amp; Wellness</h3>
+          <p>Rejuvenate body and mind with ayurvedic therapies, aromatherapy massages, and wellness rituals by expert therapists.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-icon"><i class="fas fa-swimming-pool"></i></div>
+          <h3>Swimming Pool</h3>
+          <p>Unwind at our temperature-controlled rooftop infinity pool with panoramic views and poolside bar service.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Banquet &amp; Events</h3>
+          <p>Grand ballrooms and conference halls equipped with state-of-the-art technology for weddings, events, and meetings.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Fitness Center</h3>
+          <p>A modern gym equipped with latest cardio and strength-training equipment, plus personal training sessions.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon"><i class="fas fa-car"></i></div>
+          <h3>Valet &amp; Transport</h3>
+          <p>Complimentary valet parking, luxury airport transfers, and city tour arrangements for seamless travel.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-icon"><i class="fas fa-concierge-bell"></i></div>
+          <h3>24/7 Concierge</h3>
+          <p>Our dedicated concierge team is always available to assist with reservations, recommendations, and special requests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Rooms Section ===== -->
+  <section class="rooms" id="rooms">
+    <div class="container">
+      <div class="rooms-header reveal">
+        <span class="section-tag" style="justify-content:center;">Accommodation</span>
+        <h2 class="section-title">Rooms &amp; Suites</h2>
+        <p class="section-subtitle">Each room is a sanctuary of comfort, designed to make every moment memorable</p>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Room 1 -->
+        <div class="room-card reveal reveal-delay-1">
+          <div class="room-card-image">
+            <img src="images/room-deluxe.png" alt="Deluxe Room at YV Royal Hotel">
+            <span class="room-badge">Popular</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Deluxe Room</h3>
+            <p>Spacious and elegantly appointed with premium furnishings, perfect for both business and leisure travelers.</p>
+            <ul class="room-amenities">
+              <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+              <li><i class="fas fa-tv"></i> Smart TV</li>
+              <li><i class="fas fa-snowflake"></i> AC</li>
+              <li><i class="fas fa-coffee"></i> Mini Bar</li>
+              <li><i class="fas fa-bath"></i> Rain Shower</li>
+            </ul>
+            <div class="room-card-footer">
+              <div class="room-price">
+                <span class="amount">₹4,999</span>
+                <span class="per"> / night</span>
+              </div>
+              <button class="btn-outline">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card reveal reveal-delay-2">
+          <div class="room-card-image">
+            <img src="images/room-suite.png" alt="Royal Suite at YV Royal Hotel">
+            <span class="room-badge">Best Value</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Royal Suite</h3>
+            <p>An opulent suite featuring a separate living area, marble bathroom, and stunning panoramic city views.</p>
+            <ul class="room-amenities">
+              <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+              <li><i class="fas fa-tv"></i> 65" OLED TV</li>
+              <li><i class="fas fa-snowflake"></i> Climate Control</li>
+              <li><i class="fas fa-glass-cheers"></i> Lounge</li>
+              <li><i class="fas fa-hot-tub"></i> Jacuzzi</li>
+            </ul>
+            <div class="room-card-footer">
+              <div class="room-price">
+                <span class="amount">₹9,999</span>
+                <span class="per"> / night</span>
+              </div>
+              <button class="btn-outline">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card reveal reveal-delay-3">
+          <div class="room-card-image">
+            <img src="images/dining.png" alt="Presidential Suite at YV Royal Hotel">
+            <span class="room-badge">Exclusive</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Presidential Suite</h3>
+            <p>The pinnacle of luxury — a palatial suite with private dining, butler service, and lavish interiors.</p>
+            <ul class="room-amenities">
+              <li><i class="fas fa-wifi"></i> Premium Wi-Fi</li>
+              <li><i class="fas fa-tv"></i> Home Theater</li>
+              <li><i class="fas fa-utensils"></i> Private Dining</li>
+              <li><i class="fas fa-user-tie"></i> Butler</li>
+              <li><i class="fas fa-spa"></i> In-Room Spa</li>
+            </ul>
+            <div class="room-card-footer">
+              <div class="room-price">
+                <span class="amount">₹19,999</span>
+                <span class="per"> / night</span>
+              </div>
+              <button class="btn-outline">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery Section ===== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <span class="section-tag" style="justify-content:center;">Gallery</span>
+        <h2 class="section-title">Explore Our Hotel</h2>
+        <p class="section-subtitle">A visual journey through the elegance and grandeur of YV Royal Hotel</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/hero.png" alt="YV Royal Hotel exterior">
+          <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/room-deluxe.png" alt="Deluxe Room">
+          <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/spa.png" alt="Spa & Wellness">
+          <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/dining.png" alt="Fine Dining Restaurant">
+          <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/pool.png" alt="Infinity Pool">
+          <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/room-suite.png" alt="Royal Suite">
+          <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Dining Section ===== -->
+  <section class="dining" id="dining">
+    <div class="container dining-grid">
+      <div class="dining-image reveal">
+        <img src="images/dining.png" alt="Fine Dining at YV Royal Hotel">
+        <div class="dining-image-badge">
+          <div class="big">3</div>
+          <div class="small">Restaurants</div>
+        </div>
+      </div>
+
+      <div class="dining-info reveal reveal-delay-2">
+        <span class="section-tag">Dining</span>
+        <h2 class="section-title">A Feast for<br>Every Palate</h2>
+        <p class="section-subtitle" style="margin-bottom:20px;">Culinary artistry meets warm hospitality</p>
+        <p>
+          Our award-winning chefs craft unforgettable culinary experiences 
+          using the finest locally-sourced ingredients and international flavors. 
+          From intimate candlelit dinners to grand celebrations, every meal 
+          at YV Royal Hotel is a masterpiece.
+        </p>
+
+        <h3><i class="fas fa-crown" style="color:var(--gold);margin-right:8px;"></i>The Royal Kitchen — Multi-Cuisine</h3>
+        <p>Our signature restaurant serving Indian, Continental, and Asian cuisines in a regal setting.</p>
+
+        <h3><i class="fas fa-cloud" style="color:var(--gold);margin-right:8px;"></i>Sky Lounge — Rooftop Bar</h3>
+        <p>Sip handcrafted cocktails under the stars with panoramic views of the city skyline.</p>
+
+        <h3><i class="fas fa-leaf" style="color:var(--gold);margin-right:8px;"></i>Garden Café — All-Day Dining</h3>
+        <p>A casual, open-air café perfect for breakfast, light bites, and afternoon tea.</p>
+
+        <div class="dining-cuisines">
+          <span class="cuisine-tag">Indian</span>
+          <span class="cuisine-tag">Continental</span>
+          <span class="cuisine-tag">Chinese</span>
+          <span class="cuisine-tag">Italian</span>
+          <span class="cuisine-tag">Thai</span>
+          <span class="cuisine-tag">Mughlai</span>
+        </div>
+        <button class="btn-primary">
+          View Menu <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials Section ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <span class="section-tag" style="justify-content:center;">Testimonials</span>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-subtitle">Hear from travelers who made YV Royal Hotel their home away from home</p>
+      </div>
+
+      <div class="testimonials-slider reveal">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-quote-icon">"</div>
+              <p class="testimonial-text">
+                An absolutely magnificent experience! The rooms are impeccable, the staff is incredibly 
+                attentive, and the food is world-class. YV Royal Hotel has set a new standard for 
+                luxury hospitality in Panipat. We will definitely be returning.
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-author">Rajesh &amp; Priya Sharma</p>
+              <p class="testimonial-role">Family Vacation · December 2025</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-quote-icon">"</div>
+              <p class="testimonial-text">
+                We hosted our corporate annual meeting at YV Royal Hotel and it was flawless. 
+                The conference facilities are state-of-the-art, the banquet team was highly professional, 
+                and every guest was thoroughly impressed. Outstanding service throughout.
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-author">Vikram Malhotra</p>
+              <p class="testimonial-role">Corporate Event · January 2026</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-quote-icon">"</div>
+              <p class="testimonial-text">
+                Our daughter's wedding at YV Royal Hotel was nothing short of a fairy tale. 
+                The grand ballroom decoration, the culinary spread, and the personalized attention 
+                to every detail made it the most memorable day of our lives. Truly royal!
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-author">Dr. Anita &amp; Mr. Kapoor</p>
+              <p class="testimonial-role">Wedding Celebration · November 2025</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-quote-icon">"</div>
+              <p class="testimonial-text">
+                The spa experience at YV Royal Hotel is transformative. After a long week of travel, 
+                the therapists worked magic with their Ayurvedic treatments. Combined with the 
+                infinity pool and gourmet breakfast, it was a perfect wellness retreat.
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-author">Meera Joshi</p>
+              <p class="testimonial-role">Solo Wellness Retreat · February 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-btn" id="prevTestimonial"><i class="fas fa-arrow-left"></i></button>
+          <button class="testimonial-btn" id="nextTestimonial"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stats Bar ===== -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Luxury Rooms</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number" data-target="50000">0</div>
+          <div class="stat-label">Happy Guests</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number" data-target="25">0</div>
+          <div class="stat-label">Awards Won</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-left reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">We'd Love to<br>Hear from You</h2>
+        <p class="section-subtitle" style="margin-bottom:10px;">
+          Whether you have a question, want to make a reservation, or plan a special event — our team is here for you.
+        </p>
+
+        <div class="contact-info-cards">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Address</h4>
+              <p>GT Road, Near Panipat City Center,<br>Panipat, Haryana 132103, India</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 180 400 5000<br>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>reservations@yvroyalhotel.com<br>info@yvroyalhotel.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Check-In: 2:00 PM<br>Check-Out: 12:00 PM<br>Front Desk: 24/7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2" id="contactForm">
+        <h3>Send Us a Message</h3>
+        <p>Fill in the form and our team will get back to you within 24 hours.</p>
+        <form id="enquiryForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="subject">Subject</label>
+              <select id="subject">
+                <option>Room Reservation</option>
+                <option>Event Booking</option>
+                <option>Wedding Inquiry</option>
+                <option>Corporate Meeting</option>
+                <option>Spa Appointment</option>
+                <option>General Inquiry</option>
+                <option>Feedback</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell us about your requirements..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="nav-logo-icon"><span>YV</span></div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">YV Royal</span>
+              <span class="nav-logo-sub">Hotel &amp; Resort</span>
+            </div>
+          </a>
+          <p>
+            Experience the epitome of luxury hospitality in Panipat. 
+            YV Royal Hotel — where every stay becomes a cherished memory.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> About Us</a></li>
+            <li><a href="#rooms"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Rooms &amp; Suites</a></li>
+            <li><a href="#dining"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Dining</a></li>
+            <li><a href="#gallery"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Gallery</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Spa &amp; Wellness</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Swimming Pool</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Fitness Center</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Banquet Halls</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Airport Transfer</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to receive exclusive offers, seasonal packages, and the latest updates from YV Royal Hotel.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" id="newsletterEmail">
+            <button type="button" id="newsletterBtn"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 YV Royal Hotel, Panipat. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Back to Top ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Gallery preview" id="lightboxImg">
+  </div>
+
+  <!-- ===== JavaScript ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
