@@ -1338,6 +1338,34 @@ ul { list-style: none; }
   transform: translateY(-4px);
 }
 
+
+/* ---------- Chatbot Section ---------- */
+.chatbot-section {
+  padding: var(--section-pad) 0;
+  background: var(--dark-900);
+  position: relative;
+}
+.chatbot-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  background: var(--glass-bg);
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.chatbot-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
 /* ---------- Reveal Animations ---------- */
 .reveal {
   opacity: 0;
