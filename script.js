@@ -430,4 +430,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    // ===== Floating Chat Widget Toggle =====
+    const chatWidget = document.getElementById('chatWidget');
+    const chatButton = document.getElementById('chatButton');
+    const chatClose = document.getElementById('chatClose');
+    const chatWindow = document.getElementById('chatWindow');
+    const conciergeLink = document.querySelector('a[href="#chatbot"]');
+
+    if (chatButton && chatWindow) {
+        chatButton.addEventListener('click', () => {
+            chatWindow.classList.toggle('active');
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+        });
+
+        // Open chat window when navigation link is clicked
+        if (conciergeLink) {
+            conciergeLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                chatWindow.classList.add('active');
+            });
+        }
+
+        // Close chat window when clicking outside
+        document.addEventListener('click', (e) => {
+            if (chatWidget && !chatWidget.contains(e.target) && chatWindow.classList.contains('active')) {
+                chatWindow.classList.remove('active');
+            }
+        });
+    }
 });
+
